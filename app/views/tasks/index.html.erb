@@ -1,0 +1,7 @@
+<h1>Hey</h1>
+<p>Wake up! You have a busy day</p>
+<ol><% @tasks.each do |thing| %>
+  <li><%= link_to thing.title, task_path(thing) %> - [<%= thing.status%>]</li>
+  <% end %>
+</ol>
+<p><%= link_to "Add a new task", new_task_path %></p>
